@@ -1,0 +1,5 @@
+@charset "UTF-8";
+
+@import "reset.css";
+@import "style.css";  /* 各ページ独自のスタイル */
+@import "common.css"; /* サイト全体のレイアウトや要素の共通設定 */
