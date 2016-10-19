@@ -8,7 +8,6 @@
 /build
 /dist
 /tags
-!/WebContents/
 *.mo
 
 # IDE and editor specific files #
