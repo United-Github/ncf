@@ -52,7 +52,7 @@
 			<h1>役立つページ</h1>
 			<section>
 				<div class="random-article">
-					<h2>タイトル１</h2>
+					<h2><?php echo 'タイトルだよ＝－－－';?></h2>
 				</div>
 			</section>
 			<section>
