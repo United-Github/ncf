@@ -50,24 +50,19 @@
 	<!-- 有用な記事ランダム表示 -->
 		<article class="useful-random">
 			<h1>役立つページ</h1>
-			<section>
-				<div class="random-article">
-					<h2><?php echo 'タイトルだよ＝－－－';?></h2>
-				</div>
-			</section>
-			<section>
-				<div class="random-article">
-					<h2>タイトル２</h2>
-				</div>
-			</section>
-			<section>
-				<div class="random-article">
-					<h2>タイトル３</h2>
-				</div>
-			</section>
-			<div class="morelook">
-				<a href=""><p>もっと見る</p></a>
-			</div>
+			<?php
+			$count = 0;
+			foreach($data['largeHeader'] as $value) :
+				if($count > 3) break; 
+			?>
+				<section>
+					<div class="random-article">
+						<h2><?php echo $value['LargeHeader']['title'];?></h2>
+					</div>
+				</section>
+			<?php
+			endforeach;
+			?>
 		</article>
 		<!-- 有用な記事ランダム表示終わり -->
 		<!-- 新着リクエスト -->
