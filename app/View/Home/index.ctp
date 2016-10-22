@@ -68,7 +68,18 @@
 		<!-- 新着リクエスト -->
 		<article class="new-request-list">
 			<h1>新着リクエスト</h1>
-			<section>
+			<?php
+			foreach($data['request'] as $value):
+			?>
+				<section>
+					<div class="new-request">
+						<h2><?php echo $value['Request']['title']?></h2>
+					</div>
+				</section>
+			<?php
+			endforeach;
+			?>
+			<!--section>
 				<div class="new-request">
 					<h2>タイトル１</h2>
 				</div>
@@ -95,7 +106,7 @@
 			</section>
 			<div class="request-list-link">
 				<a href=""><p>リクエスト一覧へ</p></a>
-			</div>
+			</div-->
 		</article>
 		<!-- 新着リクエスト終わり -->
 	</main>

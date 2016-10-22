@@ -5,14 +5,13 @@
  */
 App::uses('AppController', 'Controller');
 class HomeController extends AppController {
-	public $uses = array('Header', 'LargeHeader', 'SmallHeader', 'Content');
+	public $uses = array('Header', 'LargeHeader', 'SmallHeader', 'Content', 'Request');
 	public function beforeFilter() {
 		$this->Header->setModel($this);
 	}
 	public function index() {
 		$data['largeHeader'] = $this->Header->getTopLargeHeader();
-		// $this->dump($data['largeHeader']);
-		// die();
+		$data['request'] = $this->Request->getTopRequest();
 		$this->set('data', $data);
 	}
 }
