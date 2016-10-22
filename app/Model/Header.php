@@ -49,6 +49,9 @@ class Header extends AppModel {
 				'group' => array(
 					'LargeHeader.id'
 				),
+				'order' => array(
+					'LargeHeader.sum DESC'
+				),
 				'limit' => 10
 			)
 			);
