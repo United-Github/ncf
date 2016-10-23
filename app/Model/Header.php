@@ -13,12 +13,13 @@ class Header extends AppModel {
 	private $_LargeHeader;
 	private $_SmallHeader;
 	private $_Card;
-
+	private $_controller;
 // モデルのセット
 	public function setModel(AppController $controller){
 		$this->_LargeHeader = $controller->LargeHeader;
 		$this->_SmallHeader = $controller->SmallHeader;
 		$this->_Card = $controller->_Card;
+		$this->_controller = $controller;
 	}
 	// 大見出しと小見出しを取得
 	
@@ -56,6 +57,39 @@ class Header extends AppModel {
 			)
 			);
 			shuffle($data);
+		return $data;
+	}
+
+	public function getLHById(){
+
+
+
+		$data = $this->_LargeHeader->find('all' ,array(
+				'fields' => array(
+					'LargeHeader.id',
+					'LargeHeader.title',
+					'SmallHeader.id',
+					'SmallHeader.title',
+					'Card.title'
+				),
+				'joins' => array(
+					array(
+					'type' => 'RIGHT',
+					'table' => 'small_header',
+					'alias' => 'SmallHeader',
+					'conditions' =>  'LargeHeader.id = SmallHeader.large_header_id'
+					),
+					array(
+					'type' => 'RIGHT',
+					'table' => 'card',
+					'alias' => 'Card',
+					'conditions' =>  'SmallHeader.id = Card.small_header_id'
+					)
+				)
+			)
+			);
+			$this->_controller->dump($data);
+			die();
 		return $data;
 	}
 
