@@ -18,5 +18,24 @@ class Card extends AppModel {
 			)
 		));
 	}
+	public function updateThxPoint($cardId, $add) {
+			$data = $this->findById($cardId);
+
+			if (!empty($data)) {
+				$thxPoint = $data['Card']['thx_point'];
+				$thxPoint += (!$add) ? -1 : 1;
+				if ($this->save(array(
+					'id' => $cardId,
+					'thx_point' => $thxPoint
+				))) {
+					return $thxPoint;
+				} else {
+					return false;
+				}
+			} else {
+				return false;
+			}
+
+	}
 		
 }
