@@ -50,30 +50,36 @@
 	<!-- 有用な記事ランダム表示 -->
 		<article class="useful-random">
 			<h1>役立つページ</h1>
-			<section>
-				<div class="random-article">
-					<h2>タイトル１</h2>
-				</div>
-			</section>
-			<section>
-				<div class="random-article">
-					<h2>タイトル２</h2>
-				</div>
-			</section>
-			<section>
-				<div class="random-article">
-					<h2>タイトル３</h2>
-				</div>
-			</section>
-			<div class="morelook">
-				<a href=""><p>もっと見る</p></a>
-			</div>
+			<?php
+			$count = 0;
+			foreach($data['largeHeader'] as $value) :
+				if($count > 3) break; 
+			?>
+				<section>
+					<div class="random-article">
+						<h2><?php echo $value['LargeHeader']['title'];?></h2>
+					</div>
+				</section>
+			<?php
+			endforeach;
+			?>
 		</article>
 		<!-- 有用な記事ランダム表示終わり -->
 		<!-- 新着リクエスト -->
 		<article class="new-request-list">
 			<h1>新着リクエスト</h1>
-			<section>
+			<?php
+			foreach($data['request'] as $value):
+			?>
+				<section>
+					<div class="new-request">
+						<h2><?php echo $value['Request']['title']?></h2>
+					</div>
+				</section>
+			<?php
+			endforeach;
+			?>
+			<!--section>
 				<div class="new-request">
 					<h2>タイトル１</h2>
 				</div>
@@ -100,7 +106,7 @@
 			</section>
 			<div class="request-list-link">
 				<a href=""><p>リクエスト一覧へ</p></a>
-			</div>
+			</div-->
 		</article>
 		<!-- 新着リクエスト終わり -->
 	</main>
