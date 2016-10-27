@@ -55,11 +55,12 @@
 			foreach($data['largeHeader'] as $value) :
 				if($count > 3) break; 
 			?>
-				<section>
+			<a href="/LargeHeadeController/view/<?php echo $value['LargeHeader']['id'] ?>"><!-- //該当のh1list.htmlへ -->
 					<div class="random-article">
 						<h2><?php echo $value['LargeHeader']['title'];?></h2>
+						<span>ありがとう <?php echo $value['LargeHeader']['sum'];?></span>
 					</div>
-				</section>
+				</a>
 			<?php
 			endforeach;
 			?>
@@ -71,11 +72,12 @@
 			<?php
 			foreach($data['request'] as $value):
 			?>
-				<section>
+				<a href=""><!-- //該当のリクエストページへ -->
 					<div class="new-request">
 						<h2><?php echo $value['Request']['title']?></h2>
+						<span><?php echo date('Y年m月d日', strtotime($value['Request']['created']));?></span>
 					</div>
-				</section>
+				</a>
 			<?php
 			endforeach;
 			?>
