@@ -58,5 +58,20 @@ class LargeHeader extends AppModel {
 		return $data;
 	}
 
+	public function getMatchList($TagList) {
+
+		$OR = array();
+		foreach($TagList as $value) {
+			$OR[] = array('LargeHeader.id' => $value['LargeHeaderTag']['large_header_id']);
+		}
+		return  $this->getLHSum(array(
+			'conditions' => array('OR' => $OR),
+			'fields' => array(
+					'LargeHeader.title',
+					'LargeHeader.id'
+					)
+			));
+	}
+
 	
 }

@@ -5,15 +5,15 @@
  */
 App::uses('AppController', 'Controller');
 class LargeHeaderController extends AppController {
-	public $uses = array('Header', 'LargeHeader', 'SmallHeader', 'Card', 'Tag');
+	public $uses = array('Header', 'LargeHeader', 'SmallHeader', 'Card', 'Tag', 'LargeHeaderTag');
 	public function biforeFIlter() {
 		$this->Header->setModel($this);	
 	}
-	public function index($id = null) {
-		$this->dump($this->Card->getBySHId(1));
-		// var_dump($this->LargeHeader->exists(4));
-		// $data = $this->Header->getLSHeader(1);
-		// $this->set('data', $data);
+	public function index() {
+		$this->request->data['tag'] = array(1,2);
+		$data['Tag'] = $this->Tag->getByList($this->request->data['tag']);
+		$data['LargeHeader'] = $this->LargeHeader->getMatchList($this->LargeHeaderTag->getTagMatchHeader($this->request->data['tag'] ));
+		$this->set('data', $data);
 	}
 	public function view($id) {
 		$this->Header->setModel($this);

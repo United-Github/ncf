@@ -27,6 +27,19 @@ class Tag extends AppModel {
 			'order' => 'count DESC'
 		));
 	}
+	public function getByList($array) {
+		return $this->find('all', array(
+			'conditions' => array(
+				'OR' => array(
+					'Tag.id' => $array
+				)
+			),
+			'fields' => array(
+				'Tag.name'
+			)
+		));
+		
+	}
 		
 		
 }
