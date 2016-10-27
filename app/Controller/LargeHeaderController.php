@@ -6,13 +6,20 @@
 App::uses('AppController', 'Controller');
 class LargeHeaderController extends AppController {
 	public $uses = array('Header', 'LargeHeader', 'SmallHeader', 'Card', 'Tag', 'LargeHeaderTag');
-	public function biforeFIlter() {
+	public function beforeFilter() {
 		$this->Header->setModel($this);	
 	}
 	public function index() {
-		$this->request->data['tag'] = array(1,2);
-		$data['Tag'] = $this->Tag->getByList($this->request->data['tag']);
-		$data['LargeHeader'] = $this->LargeHeader->getMatchList($this->LargeHeaderTag->getTagMatchHeader($this->request->data['tag'] ));
+		if (isset($this->request->data['tag'])){
+			$idList = $this->request->data['tag'];
+		} else {
+			$this->redirect(array('controller' => 'TagList', 'action' => 'index'));
+		}
+		$data['Tag'] = $this->Tag->getByList($idList);
+		$matchList = $this->LargeHeaderTag->getTagMatchHeader($idList);
+		$data['count'] = count($matchList);
+		
+		$data['LargeHeader'] = (!empty($matchList)) ? $this->LargeHeader->getMatchList($matchList) : array();
 		$this->set('data', $data);
 	}
 	public function view($id) {

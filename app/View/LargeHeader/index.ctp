@@ -9,9 +9,9 @@
 	<meta name="format-detection" content="telephone=no" />
 	<meta name="description" content="ここに紹介文を書く">
 	<!-- ファビコン<link rel="apple-touch-icon" href="画像のパス" /> -->
-	<link rel="stylesheet" type="text/css" href="css/base.css">
+	<link rel="stylesheet" type="text/css" href="/css/base.css">
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-	<script type="text/javascript" src="js/menu.js"></script>
+	<script type="text/javascript" src="/js/menu.js"></script>
 
 </head>
 <body>
@@ -25,7 +25,8 @@
 			} 
 			?>」のタグ</h1>
 			<div>
-				<p>表示順</p>
+				<!--p>表示順</p-->
+				<p><?php echo $data['count'];?> 件のヒットがありました</p>
 			</div>
 		</div>
 		<!-- ソートのやつ -->
