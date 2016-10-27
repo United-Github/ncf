@@ -39,11 +39,17 @@
 		</ul>
 		<!-- メニュー内終わり -->
 	</nav>
-	<div class="space"></div><!-- 固定ヘッダー分の空白 -->
-	<!-- タグ検索結果 -->
-	<article class="h1list">
-		<div class="h1list-h">
-			<h1>「」のタグ</h1>
+	<<div class="space"></div><!-- 固定ヘッダー分の空白 -->
+	<article class="cardlist">
+		<div class="cardlist-h">
+			<div>
+				<h1>大見出し</h1> <!-- ここはその小見出しの大見出しを表示 -->
+			</div>
+				<a href="h2list.html"><!-- 該当のh2list.htmlへ -->
+					<div>
+						<h1>小見出し</h1> <!-- ここはひとつ前でクリックした小見出しを表示 -->
+					</div>
+				</a>
 			<div>
 				<p>表示順</p>
 			</div>
@@ -60,16 +66,18 @@
 		<!-- ソートのやつ終わり -->
 		<!-- ここから繰り返す -->
 		<section>
-			<a href="h2list.html"><!-- //該当のh2list.htmlへ -->
-				<div>
-					<h2>タイトル１</h2>
-					<span>Thanks数</span>
-				</div>
-			</a>
+			<div>
+				<h2>カードタイトル</h2>
+				<img src=""><!-- 画像 -->
+				<p>カードの中身</p>
+				<button type="button">Thanks</button><!-- 助かったボタン -->
+				<a href=""><span>Twitter</span></a>
+				<a href=""><span>FaceBook</span></a>
+				<!-- 他にシェアした方がいいやつあればお願いします -->
+			</div>
 		</section>
 		<!-- ここまで繰り返す -->
 	</article>
-	<!-- タグ検索結果終わり -->
 	<div class="page-top">
 		<a href="#TOP"><p>トップに戻る</p></a>
 	</div>
