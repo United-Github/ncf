@@ -16,34 +16,11 @@
 
 </head>
 <body>
-	<header>アプリ名
-		<!-- メニューボタン -->
-		<div class="gnav-btn">
-			<div class="icon-animation">
-				<span class="top"></span>
-				<span class="middle"></span>
-				<span class="bottom"></span>
-			</div>
-		</div>
-		<!-- メニューボタン終わり -->
-	</header>
-	<nav class="global">
-		<!-- メニュー内 -->
-		<ul class="gnav">
-			<li>メニュー</li>
-			<li><a href="index.html">トップ</a></li>
-			<li><a href="">タグ一覧</a></li>
-			<li><a href="">リクエスト</a></li>
-			<li><a href="">ユーザページ</a></li>
-		</ul>
-		<!-- メニュー内終わり -->
-	</nav>
-	<!-- 固定ヘッダー分の空白 -->
-	<div class="space"></div>
+<?php echo $this->element('header');?>
 	<!-- 固定ヘッダー分の空白終わり -->
 	<!-- タグ一覧へ -->
 	<div class="tagp-link">
-		<a href=""><p>タグ一覧</p></a>
+		<a href="/TagList/"><p>タグ一覧</p></a>
 	</div>
 	<!-- タグ一覧へ終わり -->
 	<main>
