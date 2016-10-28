@@ -18,7 +18,7 @@ class Header extends AppModel {
 	public function setModel(AppController $controller){
 		$this->_LargeHeader = $controller->LargeHeader;
 		$this->_SmallHeader = $controller->SmallHeader;
-		$this->_Card = $controller->_Card;
+		$this->_Card = $controller->Card;
 		$this->_controller = $controller;
 	}
 	// 大見出しと小見出しを取得
@@ -61,9 +61,6 @@ class Header extends AppModel {
 	}
 
 	public function getLHById(){
-
-
-
 		$data = $this->_LargeHeader->find('all' ,array(
 				'fields' => array(
 					'LargeHeader.id',
@@ -90,6 +87,40 @@ class Header extends AppModel {
 			);
 			$this->_controller->dump($data);
 			die();
+		return $data;
+	}
+
+	public function getSHList($id) {
+		$data = array();
+			$small_header = $this->_SmallHeader->find('all' ,array(
+					'fields' => array(
+						'SmallHeader.id',
+						'SmallHeader.title',
+					),
+					'conditions' => array(
+						'SmallHeader.large_header_id' => $id
+					)
+				)
+			);
+			foreach($small_header as $key => $value) {
+				$small_header[$key]['SmallHeader']['Card'] = $this->_Card->find('all', array(
+					'conditions' => array(
+						'Card.small_header_id' => $value['SmallHeader']['id']
+					),
+					'order' => 'Card.thx_point DESC',
+					'limit' => 3
+				));
+			}
+			$data['SmallHeader'] = $small_header;
+			$data += $this->_LargeHeader->find('first', array(
+				'conditions' => array(
+					'LargeHeader.id' => $id
+				),
+				'fields' => array(
+					'LargeHeader.id',
+					'LargeHeader.title'
+				)
+			));
 		return $data;
 	}
 

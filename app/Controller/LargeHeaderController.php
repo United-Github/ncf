@@ -9,6 +9,7 @@ class LargeHeaderController extends AppController {
 	public function beforeFilter() {
 		$this->Header->setModel($this);	
 	}
+
 	public function index() {
 		if (isset($this->request->data['tag'])){
 			$idList = $this->request->data['tag'];
@@ -22,11 +23,9 @@ class LargeHeaderController extends AppController {
 		$data['LargeHeader'] = (!empty($matchList)) ? $this->LargeHeader->getMatchList($matchList) : array();
 		$this->set('data', $data);
 	}
+
 	public function view($id) {
-		$this->Header->setModel($this);
-		$data = $this->Header->getTopLargeHeader();
-		$data = $this->Header->getLHById();
-		$data = 
+		$data = $this->Header->getSHList($id);
 		$this->set('data', $data);	
 	}
 
