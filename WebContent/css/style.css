@@ -561,7 +561,7 @@
 
 	.addcard h2{
 		margin-left: 2rem;
-		padding: 1rem 0 0.2rem;
+		padding: 1.5rem 0 0.2rem;
 		color: #084A83;
 		font-size: 1.3rem;
 		border-bottom: 2px dotted #539DDB;
@@ -569,7 +569,7 @@
 
 	.addcard input[type="text"]{
 		color: #084A83;
-		margin: 2% 9% 5%;
+		margin: 2% 9% 0;
 		font-size: 1.3rem;
 		padding: 0.5rem;
 		width: 82%;
