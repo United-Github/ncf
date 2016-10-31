@@ -322,13 +322,19 @@
 
 	.cardlist section{
 		position: relative;
-		padding: 2rem;
+		padding: 2rem 3rem 0rem 2rem;
     	color: #084A83;
     	width: 100%;
-    	height: 8rem;
+    	display: inline-block;
     	border-bottom: 1px solid #539DDB;
     	margin-left: 20px;
 		border-left: 4px solid #539DDB;
+	}
+
+	.cardlist section p{
+    	display: inline-block;
+    	padding: 1rem 0 1rem 1rem;
+    	font-size: 1.2rem;
 	}
 
 	.cardlist a:visited {
@@ -337,8 +343,12 @@
 
 	.cardlist section span{
 		color: #666;
-    	line-height: 4rem;
-    	font-size: 1.2rem;
+    	line-height: 3rem;
+    	font-size: 1.1rem;
+	}
+
+	.cardlist section .useraction{
+		padding: 0;
 	}
 
 	.cardlist-h1 h1{
