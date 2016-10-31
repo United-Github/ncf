@@ -1,5 +1,5 @@
 	<header>
-		<span><a href="index.html">アプリ名</a></span>
+		<span><a href="/"><?php echo TITLE ; ?></a></span>
 		<!-- メニューボタン -->
 		<div class="gnav-btn">
 			<div class="icon-animation">
@@ -14,8 +14,8 @@
 		<!-- メニュー内 -->
 		<ul class="gnav">
 			<li>メニュー</li>
-			<li><a href="index.html">トップ</a></li>
-			<li><a href="taglist.html">タグ一覧</a></li>
+			<li><a href="/">トップ</a></li>
+			<li><a href="/TagList/">タグ一覧</a></li>
 			<li><a href="requestlist.html">リクエスト一覧</a></li>
 			<li><a href="">リクエスト追加</a></li>
 			<li><a href="userpage.html">ユーザページ</a></li>

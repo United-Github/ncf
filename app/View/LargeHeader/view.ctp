@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 	<meta charset="utf-8">
-	<title>サイト名</title>
+	<title><?php echo TITLE ; ?></title>
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
 	<!-- iPhoneでWebページをアプリっぽく見せる機能 -->
 	<meta name="apple-mobile-web-app-capable" content="no">
