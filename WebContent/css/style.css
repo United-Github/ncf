@@ -196,10 +196,11 @@
 	.h1list-h h1{
 		position: relative;
 		padding: 0rem 0 1rem 1rem;
-		line-height: 3rem;
+		line-height: 3.5rem;
 		color: #084A83;
 		width: 100%;
-		height: 3rem;
+		height: 3.5rem;
+		font-size: 1.6rem;
 		margin-left: 20px;
 		border-bottom: 2px solid #539DDB;
 		border-left: 4px solid #539DDB;
@@ -211,7 +212,7 @@
 		left: -24px;
 		content: '';
 		width: 24px;
-		height: 3rem;
+		height: 3.5rem;
 		box-sizing: border-box;
 		border-left: 16px solid #539DDB;
 		border-bottom: 2px solid #539DDB;
@@ -244,10 +245,11 @@
 	.h2list-h h1{
 		position: relative;
 		padding: 0rem 0 1rem 1rem;
-		line-height: 3rem;
+		line-height: 3.5rem;
 		color: #084A83;
 		width: 100%;
-		height: 3rem;
+		height: 3.5rem;
+		font-size: 1.6rem;
 		margin-left: 20px;
 		border-bottom: 2px solid #539DDB;
 		border-left: 4px solid #539DDB;
@@ -259,7 +261,7 @@
 		left: -24px;
 		content: '';
 		width: 24px;
-		height: 3rem;
+		height: 3.5rem;
 		box-sizing: border-box;
 		border-left: 16px solid #539DDB;
 		border-bottom: 2px solid #539DDB;
@@ -292,11 +294,11 @@
 	.cardlist-h1 h1{
 		position: relative;
 		padding: 0rem 0 1rem 1rem;
-		line-height: 4rem;
+		line-height: 3.5rem;
 		color: #084A83;
 		width: 100%;
-		height: 4rem;
-		font-size: 1.7rem;
+		height: 3.5rem;
+		font-size: 1.6rem;
 		margin-left: 20px;
 		border-bottom: 2px solid #539DDB;
 		border-left: 4px solid #539DDB;
@@ -308,7 +310,7 @@
 		left: -24px;
 		content: '';
 		width: 24px;
-		height: 4rem;
+		height: 3.5rem;
 		box-sizing: border-box;
 		border-left: 16px solid #539DDB;
 		border-bottom: 2px solid #539DDB;
@@ -380,7 +382,7 @@
 	}
 	.gnav {
 		list-style-type: none;
-		background: #C6E5F3;
+		background: #EEE;
 		color: #084A83;
 		display: block;
 		width: 70%;
