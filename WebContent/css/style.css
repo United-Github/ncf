@@ -5,6 +5,8 @@
 	/*固定ヘッダー*/
 
 	header {
+		position: relative;
+  		z-index: 3;
 		background: #ccc;
 		background-color: #084A83;
 		color: #FFFFE7;
