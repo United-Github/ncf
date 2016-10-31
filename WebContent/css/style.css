@@ -44,6 +44,17 @@
 		transform: rotate(45deg);
 	}
 
+	.arrow2{
+		position: absolute;
+		top: 45%;
+		left: 82%;
+		width: 1rem;
+		height: 1rem;
+		border-top: 4px solid #084A83;
+		border-right: 4px solid #084A83;
+		transform: rotate(45deg);
+	}
+
     /*トップページ*/
 
 	.tagp-link {
@@ -208,6 +219,7 @@
 	/*大見出し一覧*/
 
 	.h1list section{
+		position: relative;
 		padding: 2rem;
     	color: #084A83;
     	width: 100%;
@@ -258,6 +270,7 @@
 	/*小見出し一覧*/
 
 	.h2list section{
+		position: relative;
 		padding: 2rem;
     	color: #084A83;
     	width: 100%;
@@ -308,6 +321,7 @@
 	/*カード一覧*/
 
 	.cardlist section{
+		position: relative;
 		padding: 2rem;
     	color: #084A83;
     	width: 100%;
@@ -383,6 +397,7 @@
 	/*リクエスト一覧*/
 
 	.requestlist section{
+		position: relative;
 		padding: 2rem;
     	color: #084A83;
     	width: 100%;
