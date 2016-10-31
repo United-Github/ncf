@@ -24,11 +24,34 @@
     }
 
 
+    /*くの字アイコン*/
+	.arrow{
+		position: relative;
+		top: -100%;
+		left: 90%;
+		width: 1rem;
+		height: 1rem;
+		border-top: 4px solid #084A83;
+		border-right: 4px solid #084A83;
+		transform: rotate(45deg);
+	}
+
+	.arrow-t{
+		position: relative;
+		top: -90%;
+		left: 70%;
+		width: 1rem;
+		height: 1rem;
+		border-top: 4px solid #084A83;
+		border-right: 4px solid #084A83;
+		transform: rotate(45deg);
+	}
+
     /*トップページ*/
 
 	.tagp-link {
 		position: relative;
-		padding: 0.75rem 0 1rem 0;
+		padding: 0.7rem 0 1rem 0;
 		line-height: 3rem;
 		font-weight: bold;
 		text-align: center;
