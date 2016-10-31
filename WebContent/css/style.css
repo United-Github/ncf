@@ -109,6 +109,17 @@
 		border-left: 4px solid #539DDB;
     }
 
+    .random-article::before{
+		left: 3px;
+		width: 4px;
+		height: 4px;
+		border-top: 2px solid #7a0;
+		border-right: 2px solid #7a0;
+		-webkit-transform: rotate(45deg);
+		transform: rotate(45deg);
+	}
+
+
     .random-article span{
     	color: #666;
     	line-height: 4rem;
