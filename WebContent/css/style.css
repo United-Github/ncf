@@ -112,6 +112,7 @@
     .random-article span{
     	color: #666;
     	line-height: 4rem;
+    	font-size: 1.2rem;
     }
 
     .new-request-list h1{
@@ -167,6 +168,7 @@
 	.new-request span{
     	color: #666;
     	line-height: 4rem;
+    	font-size: 1.2rem;
     }
 
 	/*トップページ終わり*/
@@ -191,6 +193,7 @@
 	.h1list section span{
 		color: #666;
     	line-height: 4rem;
+    	font-size: 1.2rem;
 	}
 
 	.h1list-h h1{
@@ -240,6 +243,7 @@
 	.h2list section span{
 		color: #666;
     	line-height: 4rem;
+    	font-size: 1.2rem;
 	}
 
 	.h2list-h h1{
@@ -289,6 +293,7 @@
 	.cardlist section span{
 		color: #666;
     	line-height: 4rem;
+    	font-size: 1.2rem;
 	}
 
 	.cardlist-h1 h1{
@@ -343,6 +348,56 @@
 	}
 
 	/*カード一覧終わり*/
+
+	/*リクエスト一覧*/
+
+	.requestlist section{
+		padding: 2rem;
+    	color: #084A83;
+    	width: 100%;
+    	height: 8rem;
+    	border-bottom: 1px solid #539DDB;
+    	margin-left: 20px;
+		border-left: 4px solid #539DDB;
+	}
+
+	.requestlist a:visited {
+		color: #084A83;
+	}
+
+	.requestlist section span{
+		color: #666;
+    	line-height: 4rem;
+    	font-size: 1.2rem;
+	}
+
+	.requestlist-h h1{
+		position: relative;
+		padding: 0rem 0 1rem 1rem;
+		line-height: 3.5rem;
+		color: #084A83;
+		width: 100%;
+		height: 3.5rem;
+		font-size: 1.6rem;
+		margin-left: 20px;
+		border-bottom: 2px solid #539DDB;
+		border-left: 4px solid #539DDB;
+	}
+
+	.requestlist-h h1::before{
+		position: absolute;
+		top: 0;
+		left: -24px;
+		content: '';
+		width: 24px;
+		height: 3.5rem;
+		box-sizing: border-box;
+		border-left: 16px solid #539DDB;
+		border-bottom: 2px solid #539DDB;
+		border-right: 4px solid #539DDB;
+	}
+
+	/*リクエスト一覧終わり*/
 
 	/*トップに戻るやつ*/
 
