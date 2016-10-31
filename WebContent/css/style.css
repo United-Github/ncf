@@ -424,6 +424,65 @@
 
 	/*リクエスト一覧終わり*/
 
+	/*タグ一覧*/
+	input[type="search"] {
+		color: #f39;
+		margin: 1rem 1rem 0;
+		font-size: 1.3rem;
+		padding: 0.5rem;
+		width: 70%;
+		border-color: #eee;
+		-webkit-border-radius: 1rem;
+		-moz-border-radius: 1rem;
+		border-radius: 1rem;
+	}
+
+	/* Firefox */
+	::-moz-placeholder {
+		color: #666;
+	}
+
+	/* IE */
+	input:-ms-input-placeholder {
+		color: #666;
+	}
+
+	.taglist div{
+		float: left;
+		position: relative;
+		display: inline-block;
+		color: #FFF;
+		background: #539DDB;
+		font-size: 1.3rem;
+		line-height: 1;
+		margin: 1rem 0 0.5rem 0.5rem;
+		padding: 0.7rem 1rem 0.7rem 2rem;
+		border-radius: 1.6rem 0.7rem 0.7rem 1.6rem;
+	}
+
+	.taglist div:before {
+		content: "";
+		position: absolute;
+		background: #eee;
+		top: 50%;
+		left: 0.65rem;
+		margin-top :-0.5rem;
+		height: 1rem;
+		width: 1rem;
+		border-radius: 50%;
+		box-shadow: 1px 1px 1px #777 inset;
+	}
+
+	.taglist:after { /*floatの解除、ここがポイント*/
+		display:block;
+		clear:both;
+		height:0px;
+		visibility:hidden;
+		content:".";
+	}
+
+	/*タグ一覧終わり*/
+
 	/*トップに戻るやつ*/
 
     .page-top {
