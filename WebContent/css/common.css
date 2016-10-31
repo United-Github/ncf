@@ -1,5 +1,13 @@
 @charset "UTF-8";
 
 body {
+	background-color: #fff;
 -webkit-text-size-adjust: 100%;
+font-size: 1.5rem;
+font-family: "ＭＳ ゴシック",sans-serif;
+}
+
+/* リンクの下線を消す */
+a {
+text-decoration: none;
 }

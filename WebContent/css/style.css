@@ -6,84 +6,170 @@
 
 	header {
 		background: #ccc;
-		color: #333;
-		padding: 1.5rem;
+		background-color: #084A83;
+		color: #FFFFE7;
+		padding: 1.75rem;
 		position: fixed;
 		width: 100%;
 		top: 0;
 		text-align: center;
 	}
 
+	header a:visited {
+		color: #FFFFE7;
+	}
+
     .space {
-    	height: 4rem;/*固定ヘッダー分下げる*/
+    	height: 5rem;/*固定ヘッダー分下げる*/
     }
 
 
     /*トップページ*/
 
 	.tagp-link {
-		padding-left: 1rem;
+		position: relative;
+		padding: 0.75rem 0 1rem 0;
 		line-height: 3rem;
-		margin-bottom: 1px;
-		color: #333;
+		font-weight: bold;
+		text-align: center;
+		color: #084A83;
 		width: 100%;
-		height: 3rem;
-		border-bottom: 1px solid #333;
+		height: 4rem;
+	}
+
+	.tagp-link p::before,
+	.tagp-link p::after {
+		position: absolute;
+		left: 0;
+		content: '';
+		width: 100%;
+		height: 8px;
+		box-sizing: border-box;
+	}
+	.tagp-link p::before {
+		top: 0;
+		border-top: 4px solid #539DDB;
+		border-bottom: 2px solid #539DDB;
+	}
+	.tagp-link p::after {
+		bottom: 0;
+		border-top: 2px solid #539DDB;
+		border-bottom: 4px solid #539DDB;
+	}
+
+	.tagp-link a:visited {
+		color: #084A83;
 	}
 
 	.useful-random h1{
-		padding-left: 1rem;
+		position: relative;
+		padding: 0rem 0 1rem 1rem;
 		line-height: 3rem;
-		color: #333;
+		color: #084A83;
 		width: 100%;
 		height: 3rem;
-		border-top: 1px solid #333;
+		margin-left: 20px;
+		border-bottom: 2px solid #539DDB;
+		border-left: 4px solid #539DDB;
+	}
+
+	.useful-random h1::before{
+		position: absolute;
+		top: 0;
+		left: -24px;
+		content: '';
+		width: 24px;
+		height: 3rem;
+		box-sizing: border-box;
+		border-left: 16px solid #539DDB;
+		border-bottom: 2px solid #539DDB;
+		border-right: 4px solid #539DDB;
 	}
 
 	.useful-random .morelook{
+		background-color: #539DDB;
 		line-height: 3rem;
-		margin-bottom: 2px;
 		width: 100%;
 		height: 3rem;
-		border-top: 1px solid #333;
-		border-bottom: 1px solid #333;
 		text-align: center;
+		margin-bottom: 3px;
+	}
+
+	.useful-random .morelook a:visited {
+		color: #FFF;
 	}
 
     .random-article {
-    	padding: 1rem;
-    	color: #333;
+    	padding: 2rem;
+    	color: #084A83;
     	width: 100%;
     	height: 8rem;
-    	border-top: 1px solid #333;
+    	border-bottom: 1px solid #539DDB;
+    	margin-left: 20px;
+		border-left: 4px solid #539DDB;
+    }
+
+    .random-article span{
+    	color: #666;
+    	line-height: 4rem;
+    	font-size: 1.2rem;
     }
 
     .new-request-list h1{
-    	padding-left: 1rem;
+    	position: relative;
+		padding: 0rem 0 1rem 1rem;
     	line-height: 3rem;
-		color: #333;
+		color: #084A83;
 		width: 100%;
 		height: 3rem;
-		border-top: 1px solid #333;
+		border-bottom: 2px solid #539DDB;
+		margin-left: 20px;
+		border-left: 4px solid #539DDB;
+	}
+
+	.new-request-list h1::before{
+		position: absolute;
+		top: 0;
+		left: -24px;
+		content: '';
+		width: 24px;
+		height: 3rem;
+		box-sizing: border-box;
+		border-left: 16px solid #539DDB;
+		border-bottom: 2px solid #539DDB;
+		border-right: 4px solid #539DDB;
 	}
 
 	.new-request-list .request-list-link{
+		background-color: #539DDB;
+		color: #FFF;
 		line-height: 3rem;
 		margin-bottom: 2px;
 		width: 100%;
 		height: 3rem;
-		border-top: 1px solid #333;
-		border-bottom: 1px solid #333;
+		border-top: 1px solid #539DDB;
+		border-bottom: 1px solid #539DDB;
 		text-align: center;
+	}
+	.new-request-list .request-list-link a:visited {
+		color: #FFF;
 	}
 
     .new-request {
-    	padding: 1rem;
-    	color: #333;
+    	padding: 2rem;
+    	color: #084A83;
     	width: 100%;
     	height: 8rem;
-    	border-top: 1px solid #333;
+    	border-bottom: 1px solid #539DDB;
+    	margin-left: 20px;
+		border-left: 4px solid #539DDB;
 	}
+
+	.new-request span{
+    	color: #666;
+    	line-height: 4rem;
+    	font-size: 1.2rem;
+    }
 
 	/*トップページ終わり*/
 
@@ -91,56 +177,275 @@
 	/*大見出し一覧*/
 
 	.h1list section{
-		padding: 1rem;
-    	color: #333;
+		padding: 2rem;
+    	color: #084A83;
     	width: 100%;
     	height: 8rem;
-    	border-top: 1px solid #333;
+    	border-bottom: 1px solid #539DDB;
+    	margin-left: 20px;
+		border-left: 4px solid #539DDB;
 	}
 
-	.h1list-h {
-		padding: 1rem;
-    	color: #333;
-    	width: 100%;
-    	height: 3rem;
-    	border-top: 1px solid #333;
+	.h1list a:visited {
+		color: #084A83;
+	}
+
+	.h1list section span{
+		color: #666;
+    	line-height: 4rem;
+    	font-size: 1.2rem;
+	}
+
+	.h1list-h h1{
+		position: relative;
+		padding: 0rem 0 1rem 1rem;
+		line-height: 3.5rem;
+		color: #084A83;
+		width: 100%;
+		height: 3.5rem;
+		font-size: 1.6rem;
+		margin-left: 20px;
+		border-bottom: 2px solid #539DDB;
+		border-left: 4px solid #539DDB;
+	}
+
+	.h1list-h h1::before{
+		position: absolute;
+		top: 0;
+		left: -24px;
+		content: '';
+		width: 24px;
+		height: 3.5rem;
+		box-sizing: border-box;
+		border-left: 16px solid #539DDB;
+		border-bottom: 2px solid #539DDB;
+		border-right: 4px solid #539DDB;
 	}
 
 	/*大出し一覧終わり*/
 
+	/*小見出し一覧*/
+
+	.h2list section{
+		padding: 2rem;
+    	color: #084A83;
+    	width: 100%;
+    	height: 8rem;
+    	border-bottom: 1px solid #539DDB;
+    	margin-left: 20px;
+		border-left: 4px solid #539DDB;
+	}
+
+	.h2list a:visited {
+		color: #084A83;
+	}
+
+	.h2list section span{
+		color: #666;
+    	line-height: 4rem;
+    	font-size: 1.2rem;
+	}
+
+	.h2list-h h1{
+		position: relative;
+		padding: 0rem 0 1rem 1rem;
+		line-height: 3.5rem;
+		color: #084A83;
+		width: 100%;
+		height: 3.5rem;
+		font-size: 1.6rem;
+		margin-left: 20px;
+		border-bottom: 2px solid #539DDB;
+		border-left: 4px solid #539DDB;
+	}
+
+	.h2list-h h1::before{
+		position: absolute;
+		top: 0;
+		left: -24px;
+		content: '';
+		width: 24px;
+		height: 3.5rem;
+		box-sizing: border-box;
+		border-left: 16px solid #539DDB;
+		border-bottom: 2px solid #539DDB;
+		border-right: 4px solid #539DDB;
+	}
+
+	/*小出し一覧終わり*/
+
+	/*カード一覧*/
+
+	.cardlist section{
+		padding: 2rem;
+    	color: #084A83;
+    	width: 100%;
+    	height: 8rem;
+    	border-bottom: 1px solid #539DDB;
+    	margin-left: 20px;
+		border-left: 4px solid #539DDB;
+	}
+
+	.cardlist a:visited {
+		color: #084A83;
+	}
+
+	.cardlist section span{
+		color: #666;
+    	line-height: 4rem;
+    	font-size: 1.2rem;
+	}
+
+	.cardlist-h1 h1{
+		position: relative;
+		padding: 0rem 0 1rem 1rem;
+		line-height: 3.5rem;
+		color: #084A83;
+		width: 100%;
+		height: 3.5rem;
+		font-size: 1.6rem;
+		margin-left: 20px;
+		border-bottom: 2px solid #539DDB;
+		border-left: 4px solid #539DDB;
+	}
+
+	.cardlist-h1 h1::before{
+		position: absolute;
+		top: 0;
+		left: -24px;
+		content: '';
+		width: 24px;
+		height: 3.5rem;
+		box-sizing: border-box;
+		border-left: 16px solid #539DDB;
+		border-bottom: 2px solid #539DDB;
+		border-right: 4px solid #539DDB;
+	}
+
+	.cardlist-h2 h1{
+		position: relative;
+		padding: 0rem 0 1rem 1rem;
+		line-height: 3rem;
+		color: #084A83;
+		width: 100%;
+		height: 3rem;
+		margin-left: 20px;
+		border-bottom: 2px solid #539DDB;
+		border-left: 4px solid #539DDB;
+	}
+
+	.cardlist-h2 h1::before{
+		position: absolute;
+		top: 0;
+		left: -24px;
+		content: '';
+		width: 24px;
+		height: 3rem;
+		box-sizing: border-box;
+		border-left: 16px solid #539DDB;
+		border-bottom: 2px solid #539DDB;
+		border-right: 4px solid #539DDB;
+	}
+
+	/*カード一覧終わり*/
+
+	/*リクエスト一覧*/
+
+	.requestlist section{
+		padding: 2rem;
+    	color: #084A83;
+    	width: 100%;
+    	height: 8rem;
+    	border-bottom: 1px solid #539DDB;
+    	margin-left: 20px;
+		border-left: 4px solid #539DDB;
+	}
+
+	.requestlist a:visited {
+		color: #084A83;
+	}
+
+	.requestlist section span{
+		color: #666;
+    	line-height: 4rem;
+    	font-size: 1.2rem;
+	}
+
+	.requestlist-h h1{
+		position: relative;
+		padding: 0rem 0 1rem 1rem;
+		line-height: 3.5rem;
+		color: #084A83;
+		width: 100%;
+		height: 3.5rem;
+		font-size: 1.6rem;
+		margin-left: 20px;
+		border-bottom: 2px solid #539DDB;
+		border-left: 4px solid #539DDB;
+	}
+
+	.requestlist-h h1::before{
+		position: absolute;
+		top: 0;
+		left: -24px;
+		content: '';
+		width: 24px;
+		height: 3.5rem;
+		box-sizing: border-box;
+		border-left: 16px solid #539DDB;
+		border-bottom: 2px solid #539DDB;
+		border-right: 4px solid #539DDB;
+	}
+
+	/*リクエスト一覧終わり*/
 
 	/*トップに戻るやつ*/
 
     .page-top {
+    	background-color: #084A83;
     	line-height: 5rem;
-    	color: #333;
+    	color: #FFF;
     	width: 100%;
     	height: 5rem;
-    	border-top: 1px solid #333;
+    	border-top: 1px solid #084A83;
     	text-align: center;
     }
 
+    .page-top a:visited {
+		color: #FFF;
+	}
+
+	.page-top a:link {
+		color: #FFF;
+	}
 
 	/*menu開閉部分*/
 
 	.gnav li {
-		border-bottom: 1px solid #333;
+		border-bottom: 2px solid #084A83;
+		border-left: 17px solid #084A83;
 		display: block;
 		text-decoration: none;
 		/* (44-16)/2=14px */
-		padding: 1rem 1rem;
+		padding: 1.5rem 2rem;
+		font-weight: bold;
+		font-size: 1.3rem;
 	}
 
+	.gnav a:visited {
+		color:#084A83;
+	}
 	.gnav {
 		list-style-type: none;
-		background: #eee;
+		background: #EEE;
+		color: #084A83;
 		display: block;
-		width: 60%;
+		width: 70%;
 		overflow-x: hidden;
 		overflow-y: auto;
 		position: fixed;
 		right: 0;
-		top: 4rem;
+		top: 5rem;
 		z-index: 99;
 		visibility: hidden;
 		-webkit-transform: translateX(100%);
@@ -209,9 +514,9 @@
 
 	.icon-animation span {
 		width: 39px;
-		height: 1px;
+		height: 3px;
 		display: block;
-		background: #333;
+		background: #FFF;
 		position: absolute;
 		left: 50%;
 		top: 50%;
@@ -223,7 +528,17 @@
 		transform: rotate(0deg);
 	}
 
+	.icon-animation .text {
+		color: #FFF;
+		position: absolute;
+		font-size: 1rem;
+		font-weight: bolder;
+		left: -20%;
+		top: 100%;
+	}
+
 	.icon-animation .top {
+
 		-webkit-transform: translateY(-13px);
 		-ms-transform: translateY(-13px);
 		transform: translateY(-13px);
