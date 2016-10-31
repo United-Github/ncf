@@ -87,6 +87,7 @@ Cache::config('default', array('engine' => 'File'));
  *
  * ));
  */
+ Configure::load("const");
 Configure::write('Dispatcher.filters', array(
 	'AssetDispatcher',
 	'CacheDispatcher'
