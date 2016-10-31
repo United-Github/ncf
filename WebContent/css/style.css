@@ -113,17 +113,17 @@
 		color: #FFF;
 	}
 
-    .random-article {
-    	padding: 2rem;
-    	color: #084A83;
-    	width: 100%;
-    	height: 8rem;
-    	border-bottom: 1px solid #539DDB;
-    	margin-left: 20px;
+	.random-article {
+		padding: 2rem;
+		color: #084A83;
+		width: 100%;
+		height: 8rem;
+		border-bottom: 1px solid #539DDB;
+		margin-left: 20px;
 		border-left: 4px solid #539DDB;
-    }
+	}
 
-    .random-article::before{
+	.random-article::before{
 		left: 3px;
 		width: 4px;
 		height: 4px;
