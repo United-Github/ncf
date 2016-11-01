@@ -5,14 +5,22 @@
 	/*固定ヘッダー*/
 
 	header {
+		position: relative;
+  		z-index: 3;
 		background: #ccc;
 		background-color: #084A83;
 		color: #FFFFE7;
-		padding: 1.75rem;
+		height: 5rem;
 		position: fixed;
 		width: 100%;
 		top: 0;
 		text-align: center;
+	}
+
+	header img{
+		position: absolute;
+		left: 25%;
+		top: 40%;
 	}
 
 	header a:visited {
@@ -24,11 +32,34 @@
     }
 
 
+    /*くの字アイコン*/
+	.arrow{
+		position: relative;
+		top: -100%;
+		left: 90%;
+		width: 1rem;
+		height: 1rem;
+		border-top: 4px solid #084A83;
+		border-right: 4px solid #084A83;
+		transform: rotate(45deg);
+	}
+
+	.arrow2{
+		position: absolute;
+		top: 45%;
+		left: 82%;
+		width: 1rem;
+		height: 1rem;
+		border-top: 4px solid #084A83;
+		border-right: 4px solid #084A83;
+		transform: rotate(45deg);
+	}
+
     /*トップページ*/
 
 	.tagp-link {
 		position: relative;
-		padding: 0.75rem 0 1rem 0;
+		padding: 0.7rem 0 1rem 0;
 		line-height: 3rem;
 		font-weight: bold;
 		text-align: center;
@@ -99,15 +130,26 @@
 		color: #FFF;
 	}
 
-    .random-article {
-    	padding: 2rem;
-    	color: #084A83;
-    	width: 100%;
-    	height: 8rem;
-    	border-bottom: 1px solid #539DDB;
-    	margin-left: 20px;
+	.random-article {
+		padding: 2rem;
+		color: #084A83;
+		width: 100%;
+		height: 8rem;
+		border-bottom: 1px solid #539DDB;
+		margin-left: 20px;
 		border-left: 4px solid #539DDB;
-    }
+	}
+
+	.random-article::before{
+		left: 3px;
+		width: 4px;
+		height: 4px;
+		border-top: 2px solid #7a0;
+		border-right: 2px solid #7a0;
+		-webkit-transform: rotate(45deg);
+		transform: rotate(45deg);
+	}
+
 
     .random-article span{
     	color: #666;
@@ -144,7 +186,7 @@
 		background-color: #539DDB;
 		color: #FFF;
 		line-height: 3rem;
-		margin-bottom: 2px;
+		margin-bottom: 3px;
 		width: 100%;
 		height: 3rem;
 		border-top: 1px solid #539DDB;
@@ -177,6 +219,7 @@
 	/*大見出し一覧*/
 
 	.h1list section{
+		position: relative;
 		padding: 2rem;
     	color: #084A83;
     	width: 100%;
@@ -227,6 +270,7 @@
 	/*小見出し一覧*/
 
 	.h2list section{
+		position: relative;
 		padding: 2rem;
     	color: #084A83;
     	width: 100%;
@@ -277,13 +321,20 @@
 	/*カード一覧*/
 
 	.cardlist section{
-		padding: 2rem;
+		position: relative;
+		padding: 2rem 3rem 0rem 2rem;
     	color: #084A83;
     	width: 100%;
-    	height: 8rem;
+    	display: inline-block;
     	border-bottom: 1px solid #539DDB;
     	margin-left: 20px;
 		border-left: 4px solid #539DDB;
+	}
+
+	.cardlist section p{
+    	display: inline-block;
+    	padding: 1rem 0 1rem 1rem;
+    	font-size: 1.2rem;
 	}
 
 	.cardlist a:visited {
@@ -292,8 +343,12 @@
 
 	.cardlist section span{
 		color: #666;
-    	line-height: 4rem;
-    	font-size: 1.2rem;
+    	line-height: 3rem;
+    	font-size: 1.1rem;
+	}
+
+	.cardlist section .useraction{
+		padding: 0;
 	}
 
 	.cardlist-h1 h1{
@@ -352,6 +407,7 @@
 	/*リクエスト一覧*/
 
 	.requestlist section{
+		position: relative;
 		padding: 2rem;
     	color: #084A83;
     	width: 100%;
@@ -398,6 +454,65 @@
 	}
 
 	/*リクエスト一覧終わり*/
+
+	/*タグ一覧*/
+	input[type="search"] {
+		color: #f39;
+		margin: 1rem 1rem 0;
+		font-size: 1.3rem;
+		padding: 0.5rem;
+		width: 70%;
+		border-color: #eee;
+		-webkit-border-radius: 1rem;
+		-moz-border-radius: 1rem;
+		border-radius: 1rem;
+	}
+
+	/* Firefox */
+	::-moz-placeholder {
+		color: #666;
+	}
+
+	/* IE */
+	input:-ms-input-placeholder {
+		color: #666;
+	}
+
+	.taglist div{
+		float: left;
+		position: relative;
+		display: inline-block;
+		color: #FFF;
+		background: #539DDB;
+		font-size: 1.3rem;
+		line-height: 1;
+		margin: 1rem 0 0.5rem 0.5rem;
+		padding: 0.7rem 1rem 0.7rem 2rem;
+		border-radius: 1.6rem 0.7rem 0.7rem 1.6rem;
+	}
+
+	.taglist div:before {
+		content: "";
+		position: absolute;
+		background: #eee;
+		top: 50%;
+		left: 0.65rem;
+		margin-top :-0.5rem;
+		height: 1rem;
+		width: 1rem;
+		border-radius: 50%;
+		box-shadow: 1px 1px 1px #777 inset;
+	}
+
+	.taglist:after { /*floatの解除、ここがポイント*/
+		display:block;
+		clear:both;
+		height:0px;
+		visibility:hidden;
+		content:".";
+	}
+
+	/*タグ一覧終わり*/
 
 	/*トップに戻るやつ*/
 
