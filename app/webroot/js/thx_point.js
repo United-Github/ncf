@@ -70,7 +70,7 @@ var thxPointChange = function(id, obj) {
 		add = true;
 	}
 	add = (add)?1:0;
-	var uri = document.baseURI.match(/http:\/\/(\w|\.)+\//)[0]  + 'api_thx_point/' + id + '.json?add=' + add;
+	var uri = document.baseURI.match(/http:\/\/(\w|\.)+\//)[0]  + 'api_thx_point/view/' + id + '?add=' + add;
 	$.ajax({
 		type: "GET",
 		url:uri,
