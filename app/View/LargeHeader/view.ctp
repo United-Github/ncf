@@ -10,7 +10,7 @@
 	<meta name="description" content="ここに紹介文を書く">
 	<!-- ファビコン<link rel="apple-touch-icon" href="画像のパス" /> -->
 	<link rel="stylesheet" type="text/css" href="/css/base.css">
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script type="text/javascript" src="/js/jquery.min.js"></script>
 	<script type="text/javascript" src="/js/menu.js"></script>
 
 </head>
@@ -40,7 +40,7 @@
 		<!-- ここから繰り返す -->
 		<?php foreach($data['SmallHeader'] as $smallHeader) :?>
 		<h2><?php echo $smallHeader['SmallHeader']['title'];?></h2>
-			<a href="cardlist.html"><!-- //該当のcardlist.htmlへ -->
+			<a href="/Card/view/<?php echo $smallHeader['SmallHeader']['id'];?>"><!-- //該当のcardlist.htmlへ -->
 			<?php foreach($smallHeader['SmallHeader']['Card'] as $card) : ?>
 			<section>
 					<div>
