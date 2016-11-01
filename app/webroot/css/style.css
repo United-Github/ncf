@@ -31,7 +31,6 @@
     	height: 5rem;/*固定ヘッダー分下げる*/
     }
 
-
     /*くの字アイコン*/
 	.arrow{
 		position: relative;
@@ -290,7 +289,7 @@
     	font-size: 1.2rem;
 	}
 
-	.h2list-h h1{
+	.h2list-h1 h1{
 		position: relative;
 		padding: 0rem 0 1rem 1rem;
 		line-height: 3.5rem;
@@ -303,13 +302,39 @@
 		border-left: 4px solid #539DDB;
 	}
 
-	.h2list-h h1::before{
+	.h2list-h1 h1::before{
 		position: absolute;
 		top: 0;
 		left: -24px;
 		content: '';
 		width: 24px;
 		height: 3.5rem;
+		box-sizing: border-box;
+		border-left: 16px solid #539DDB;
+		border-bottom: 2px solid #539DDB;
+		border-right: 4px solid #539DDB;
+	}
+
+
+	.h2list-h2 h1{
+		position: relative;
+		padding: 0rem 0 1rem 1rem;
+		line-height: 3rem;
+		color: #084A83;
+		width: 100%;
+		height: 3rem;
+		margin-left: 20px;
+		border-bottom: 2px solid #539DDB;
+		border-left: 4px solid #539DDB;
+	}
+
+	.h2list-h2 h1::before{
+		position: absolute;
+		top: 0;
+		left: -24px;
+		content: '';
+		width: 24px;
+		height: 3rem;
 		box-sizing: border-box;
 		border-left: 16px solid #539DDB;
 		border-bottom: 2px solid #539DDB;
@@ -456,7 +481,7 @@
 	/*リクエスト一覧終わり*/
 
 	/*タグ一覧*/
-	input[type="search"] {
+	.tag-search input[type="search"] {
 		color: #f39;
 		margin: 1rem 1rem 0;
 		font-size: 1.3rem;
@@ -469,12 +494,12 @@
 	}
 
 	/* Firefox */
-	::-moz-placeholder {
+	.tag-search ::-moz-placeholder {
 		color: #666;
 	}
 
 	/* IE */
-	input:-ms-input-placeholder {
+	.tag-search input:-ms-input-placeholder {
 		color: #666;
 	}
 
@@ -513,6 +538,112 @@
 	}
 
 	/*タグ一覧終わり*/
+
+	/*カード追加*/
+	.addcard h1{
+		padding: 1rem 1rem 0.5rem;
+		color: #084A83;
+		border-bottom: 3px solid #539DDB;
+	}
+
+	.addcard input[type="submit"]{
+		margin: 0 20%;
+		width: 60%;
+		height: 3rem;
+		font-size: 1.3rem;
+		background-color: #084A83;
+	    color: #fff;
+	    border-style: none;
+		-webkit-border-radius: 0.5rem;
+		-moz-border-radius: 0.5rem;
+		border-radius: 0.5rem;
+	}
+
+	.addcard h2{
+		margin-left: 2rem;
+		padding: 1.5rem 0 0.2rem;
+		color: #084A83;
+		font-size: 1.3rem;
+		border-bottom: 2px dotted #539DDB;
+	}
+
+	.addcard input[type="text"]{
+		color: #084A83;
+		margin: 2% 9% 0;
+		font-size: 1.3rem;
+		padding: 0.5rem;
+		width: 82%;
+		border: #ccc solid 2px;
+		-webkit-border-radius: 1rem;
+		-moz-border-radius: 1rem;
+		border-radius: 1rem;
+	}
+
+	.addcard textarea {
+		color: #084A83;
+		margin: 2% 9% 5%;
+		font-size: 1.3rem;
+		padding: 0.5rem;
+		width: 82%;
+		border: #ccc solid 2px;
+		-webkit-border-radius: 1rem;
+		-moz-border-radius: 1rem;
+		border-radius: 1rem;
+	}
+
+	/* Firefox */
+	.addcard ::-moz-placeholder {
+		color: #666;
+	}
+
+	/* IE */
+	.addcard textarea:-ms-input-placeholder {
+		color: #666;
+	}
+	/*カード追加終わり*/
+
+	/*リクエスト追加*/
+	.addrequest h1{
+		padding: 1rem 1rem 0.5rem;
+		color: #084A83;
+		border-bottom: 3px solid #539DDB;
+	}
+
+	.addrequest input{
+		margin: 0 20%;
+		width: 60%;
+		height: 3rem;
+		font-size: 1.3rem;
+		background-color: #084A83;
+	    color: #fff;
+	    border-style: none;
+		-webkit-border-radius: 0.5rem;
+		-moz-border-radius: 0.5rem;
+		border-radius: 0.5rem;
+	}
+
+	.addrequest textarea {
+		color: #084A83;
+		margin: 5%;
+		font-size: 1.3rem;
+		padding: 0.5rem;
+		width: 90%;
+		border: #ccc solid 2px;
+		-webkit-border-radius: 1rem;
+		-moz-border-radius: 1rem;
+		border-radius: 1rem;
+	}
+
+	/* Firefox */
+	.addrequest ::-moz-placeholder {
+		color: #666;
+	}
+
+	/* IE */
+	.addrequest textarea:-ms-input-placeholder {
+		color: #666;
+	}
+	/*リクエスト追加終わり*/
 
 	/*トップに戻るやつ*/
 
