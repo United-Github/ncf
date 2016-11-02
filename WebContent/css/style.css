@@ -547,7 +547,7 @@
 	}
 
 	.addcard input[type="submit"]{
-		margin: 0 20%;
+		margin: 0 20% 10%;
 		width: 60%;
 		height: 3rem;
 		font-size: 1.3rem;
@@ -568,6 +568,18 @@
 	}
 
 	.addcard input[type="text"]{
+		color: #084A83;
+		margin: 2% 9% 0;
+		font-size: 1.3rem;
+		padding: 0.5rem;
+		width: 82%;
+		border: #ccc solid 2px;
+		-webkit-border-radius: 1rem;
+		-moz-border-radius: 1rem;
+		border-radius: 1rem;
+	}
+
+	.addcard input[type="file"]{
 		color: #084A83;
 		margin: 2% 9% 0;
 		font-size: 1.3rem;

@@ -36,6 +36,7 @@
 			<a href="taglist.html"><li>タグ一覧</li></a>
 			<a href="requestlist.html"><li>リクエスト一覧</li></a>
 			<a href="add-request.html"><li>リクエスト追加</li></a>
+			<a href="add-card.html"><li>カード追加</li></a>
 			<a href="userpage.html"><li>ユーザページ</li></a>
 		</ul>
 		<!-- メニュー内終わり -->
@@ -43,20 +44,23 @@
 	<div class="space"></div><!-- 固定ヘッダー分の空白 -->
 
 	<main class="addcard">
-		<h1>カード追加</h1>
-		<h2>大見出し</h2>
-		<input type="text" name="h1"></input>
-		<h2>小見出し</h2>
-		<input type="text" name="h2"></input>
-		<h2>タイトル</h2>
-		<input type="text" name="cardtitle"></input>
-		<h2>本文</h2>
-		<textarea name="request" rows="8"　maxlength="300" wrap="hard" autofocus	  required  placeholder="ここに記入して下さい"></textarea>
-		<input type="submit" name="submit" value="送信する"></input>
+		<form>
+			<h1>カード追加</h1>
+			<h2>大見出し</h2>
+			<input type="text" name="h1" rows="1" maxlength="30"></input>
+			<h2>小見出し</h2>
+			<input type="text" name="h2" rows="1" maxlength="30"></input>
+			<h2>タイトル</h2>
+			<input type="text" name="cardtitle" rows="1" maxlength="30"></input>
+			<h2>本文</h2>
+			<textarea name="request" rows="8"　maxlength="300" wrap="hard" required  placeholder="ここに記入して下さい"></textarea>
+			<input type="file" name="img" accept="image/*" value="送信する" multiple="4"></input>
+			<input type="submit" name="submit" value="送信する"></input>
+		</form>
 	</main>
 
 	<!-- ナビの時の霞ませるレイヤー -->
 	<div class="model"></div>
 	<!-- ナビの時の霞ませるレイヤー終わり -->
 </body>
-</html>y
+</html>
