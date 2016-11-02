@@ -49,7 +49,7 @@
 	<aside class="tag-search">
 		<section>
 			<div>
-				<input type="search" class="js_input"></input>
+				<input type="search" placeholder="タグをクリックして選んでください" class="js_input"></input>
 			</div>
 		</section>
 		<button class="js_submit">検索</button>

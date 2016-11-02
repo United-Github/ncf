@@ -36,6 +36,7 @@
 					<div class="random-article">
 						<h2><?php echo $value['LargeHeader']['title'];?></h2>
 						<span>ありがとう <?php echo $value['LargeHeader']['sum'];?></span>
+						<div class="arrow"></div>
 					</div>
 				</a>
 			<?php
@@ -53,6 +54,7 @@
 					<div class="new-request">
 						<h2><?php echo $value['Request']['title']?></h2>
 						<span><?php echo date('Y年m月d日', strtotime($value['Request']['created']));?></span>
+						<div class="arrow"></div>
 					</div>
 				</a>
 			<?php

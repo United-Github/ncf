@@ -46,6 +46,7 @@
 					<div>
 						<h2><?php echo $value['LargeHeader']['title']?></h2>
 						<span>ありがとう <?php echo $value['LargeHeader']['sum']?></span>
+						<div class="arrow2"></div>
 					</div>
 				</a>
 			</section>

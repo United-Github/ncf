@@ -1,5 +1,6 @@
 	<header>
-		<span><a href="/"><?php echo TITLE ; ?></a></span>
+		<!--span><a href="/"><!?php echo TITLE ; ?></a></span-->
+		<span><a href="/"><img src="/img/appname.png" height="30rem" alt="僕らでつくる災害碑"></a></span>
 		<!-- メニューボタン -->
 		<div class="gnav-btn">
 			<div class="icon-animation">
