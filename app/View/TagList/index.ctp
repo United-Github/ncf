@@ -10,7 +10,7 @@
 	<meta name="description" content="ここに紹介文を書く">
 	<!-- ファビコン<link rel="apple-touch-icon" href="画像のパス" /> -->
 	<link rel="stylesheet" type="text/css" href="/css/base.css">
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script type="text/javascript" src="/js/jquery.min.js"></script>
 	<script type="text/javascript" src="/js/menu.js"></script>
 	<script type="text/javascript">
 		$(function(){
@@ -49,7 +49,7 @@
 	<aside class="tag-search">
 		<section>
 			<div>
-				<input type="search" class="js_input"></input>
+				<input type="search" placeholder="タグをクリックして選んでください" class="js_input"></input>
 			</div>
 		</section>
 		<button class="js_submit">検索</button>

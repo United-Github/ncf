@@ -10,7 +10,7 @@
 	<meta name="description" content="ここに紹介文を書く">
 	<!-- ファビコン<link rel="apple-touch-icon" href="画像のパス" /> -->
 	<link rel="stylesheet" type="text/css" href="/css/base.css">
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script type="text/javascript" src="/js/jquery.min.js"></script>
 	<script type="text/javascript" src="/js/menu.js"></script>
 
 
@@ -36,6 +36,7 @@
 					<div class="random-article">
 						<h2><?php echo $value['LargeHeader']['title'];?></h2>
 						<span>ありがとう <?php echo $value['LargeHeader']['sum'];?></span>
+						<div class="arrow"></div>
 					</div>
 				</a>
 			<?php
@@ -53,6 +54,7 @@
 					<div class="new-request">
 						<h2><?php echo $value['Request']['title']?></h2>
 						<span><?php echo date('Y年m月d日', strtotime($value['Request']['created']));?></span>
+						<div class="arrow"></div>
 					</div>
 				</a>
 			<?php

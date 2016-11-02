@@ -50,7 +50,9 @@ $(function() {
 	変更ができたとき、resultには助かったポイントの数が入る
 	変更できななかったとき、resultにはfalseが入る
 */
-function thxPointChange(id, func) {
+
+
+var thxPointChange = function(id, obj) {
 	var thxPoint = new Array();
 	if ($.cookie("thxPoint")) {
 		thxPoint = $.cookie("thxPoint");
@@ -68,12 +70,14 @@ function thxPointChange(id, func) {
 		add = true;
 	}
 	add = (add)?1:0;
-	var uri = document.baseURI.match(/^http:\/\/.+\//)[0]  + 'api_thx_point/' + id + '.json?add=' + add;
+	var uri = document.baseURI.match(/http:\/\/(\w|\.)+\//)[0]  + 'api_thx_point/view/' + id + '?add=' + add;
 	$.ajax({
 		type: "GET",
 		url:uri,
 	}).done(function( msg ) {
 		$.cookie("thxPoint",$.stringify(thxPoint), { expires: 700 });
-		func(msg['result']);
+		obj.text(msg['result']);
 	});
 }
+
+window.thxPointChange = thxPointChange;

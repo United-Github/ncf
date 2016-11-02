@@ -5,14 +5,22 @@
 	/*固定ヘッダー*/
 
 	header {
+		position: relative;
+  		z-index: 3;
 		background: #ccc;
 		background-color: #084A83;
 		color: #FFFFE7;
-		padding: 1.75rem;
+		height: 5rem;
 		position: fixed;
 		width: 100%;
 		top: 0;
 		text-align: center;
+	}
+
+	header img{
+		position: absolute;
+		left: 25%;
+		top: 40%;
 	}
 
 	header a:visited {
@@ -23,12 +31,34 @@
     	height: 5rem;/*固定ヘッダー分下げる*/
     }
 
+    /*くの字アイコン*/
+	.arrow{
+		position: relative;
+		top: -100%;
+		left: 90%;
+		width: 1rem;
+		height: 1rem;
+		border-top: 4px solid #084A83;
+		border-right: 4px solid #084A83;
+		transform: rotate(45deg);
+	}
+
+	.arrow2{
+		position: absolute;
+		top: 45%;
+		left: 82%;
+		width: 1rem;
+		height: 1rem;
+		border-top: 4px solid #084A83;
+		border-right: 4px solid #084A83;
+		transform: rotate(45deg);
+	}
 
     /*トップページ*/
 
 	.tagp-link {
 		position: relative;
-		padding: 0.75rem 0 1rem 0;
+		padding: 0.7rem 0 1rem 0;
 		line-height: 3rem;
 		font-weight: bold;
 		text-align: center;
@@ -99,15 +129,26 @@
 		color: #FFF;
 	}
 
-    .random-article {
-    	padding: 2rem;
-    	color: #084A83;
-    	width: 100%;
-    	height: 8rem;
-    	border-bottom: 1px solid #539DDB;
-    	margin-left: 20px;
+	.random-article {
+		padding: 2rem;
+		color: #084A83;
+		width: 100%;
+		height: 8rem;
+		border-bottom: 1px solid #539DDB;
+		margin-left: 20px;
 		border-left: 4px solid #539DDB;
-    }
+	}
+
+	.random-article::before{
+		left: 3px;
+		width: 4px;
+		height: 4px;
+		border-top: 2px solid #7a0;
+		border-right: 2px solid #7a0;
+		-webkit-transform: rotate(45deg);
+		transform: rotate(45deg);
+	}
+
 
     .random-article span{
     	color: #666;
@@ -144,7 +185,7 @@
 		background-color: #539DDB;
 		color: #FFF;
 		line-height: 3rem;
-		margin-bottom: 2px;
+		margin-bottom: 3px;
 		width: 100%;
 		height: 3rem;
 		border-top: 1px solid #539DDB;
@@ -177,6 +218,7 @@
 	/*大見出し一覧*/
 
 	.h1list section{
+		position: relative;
 		padding: 2rem;
     	color: #084A83;
     	width: 100%;
@@ -227,6 +269,7 @@
 	/*小見出し一覧*/
 
 	.h2list section{
+		position: relative;
 		padding: 2rem;
     	color: #084A83;
     	width: 100%;
@@ -246,7 +289,7 @@
     	font-size: 1.2rem;
 	}
 
-	.h2list-h h1{
+	.h2list-h1 h1{
 		position: relative;
 		padding: 0rem 0 1rem 1rem;
 		line-height: 3.5rem;
@@ -259,7 +302,7 @@
 		border-left: 4px solid #539DDB;
 	}
 
-	.h2list-h h1::before{
+	.h2list-h1 h1::before{
 		position: absolute;
 		top: 0;
 		left: -24px;
@@ -272,18 +315,51 @@
 		border-right: 4px solid #539DDB;
 	}
 
+
+	.h2list-h2 h1{
+		position: relative;
+		padding: 0rem 0 1rem 1rem;
+		line-height: 3rem;
+		color: #084A83;
+		width: 100%;
+		height: 3rem;
+		margin-left: 20px;
+		border-bottom: 2px solid #539DDB;
+		border-left: 4px solid #539DDB;
+	}
+
+	.h2list-h2 h1::before{
+		position: absolute;
+		top: 0;
+		left: -24px;
+		content: '';
+		width: 24px;
+		height: 3rem;
+		box-sizing: border-box;
+		border-left: 16px solid #539DDB;
+		border-bottom: 2px solid #539DDB;
+		border-right: 4px solid #539DDB;
+	}
+
 	/*小出し一覧終わり*/
 
 	/*カード一覧*/
 
 	.cardlist section{
-		padding: 2rem;
+		position: relative;
+		padding: 2rem 3rem 0rem 2rem;
     	color: #084A83;
     	width: 100%;
-    	height: 8rem;
+    	display: inline-block;
     	border-bottom: 1px solid #539DDB;
     	margin-left: 20px;
 		border-left: 4px solid #539DDB;
+	}
+
+	.cardlist section p{
+    	display: inline-block;
+    	padding: 1rem 0 1rem 1rem;
+    	font-size: 1.2rem;
 	}
 
 	.cardlist a:visited {
@@ -292,8 +368,12 @@
 
 	.cardlist section span{
 		color: #666;
-    	line-height: 4rem;
-    	font-size: 1.2rem;
+    	line-height: 3rem;
+    	font-size: 1.1rem;
+	}
+
+	.cardlist section .useraction{
+		padding: 0;
 	}
 
 	.cardlist-h1 h1{
@@ -352,6 +432,7 @@
 	/*リクエスト一覧*/
 
 	.requestlist section{
+		position: relative;
 		padding: 2rem;
     	color: #084A83;
     	width: 100%;
@@ -398,6 +479,171 @@
 	}
 
 	/*リクエスト一覧終わり*/
+
+	/*タグ一覧*/
+	.tag-search input[type="search"] {
+		color: #f39;
+		margin: 1rem 1rem 0;
+		font-size: 1.3rem;
+		padding: 0.5rem;
+		width: 70%;
+		border-color: #eee;
+		-webkit-border-radius: 1rem;
+		-moz-border-radius: 1rem;
+		border-radius: 1rem;
+	}
+
+	/* Firefox */
+	.tag-search ::-moz-placeholder {
+		color: #666;
+	}
+
+	/* IE */
+	.tag-search input:-ms-input-placeholder {
+		color: #666;
+	}
+
+	.taglist div{
+		float: left;
+		position: relative;
+		display: inline-block;
+		color: #FFF;
+		background: #539DDB;
+		font-size: 1.3rem;
+		line-height: 1;
+		margin: 1rem 0 0.5rem 0.5rem;
+		padding: 0.7rem 1rem 0.7rem 2rem;
+		border-radius: 1.6rem 0.7rem 0.7rem 1.6rem;
+	}
+
+	.taglist div:before {
+		content: "";
+		position: absolute;
+		background: #eee;
+		top: 50%;
+		left: 0.65rem;
+		margin-top :-0.5rem;
+		height: 1rem;
+		width: 1rem;
+		border-radius: 50%;
+		box-shadow: 1px 1px 1px #777 inset;
+	}
+
+	.taglist:after { /*floatの解除、ここがポイント*/
+		display:block;
+		clear:both;
+		height:0px;
+		visibility:hidden;
+		content:".";
+	}
+
+	/*タグ一覧終わり*/
+
+	/*カード追加*/
+	.addcard h1{
+		padding: 1rem 1rem 0.5rem;
+		color: #084A83;
+		border-bottom: 3px solid #539DDB;
+	}
+
+	.addcard input[type="submit"]{
+		margin: 0 20%;
+		width: 60%;
+		height: 3rem;
+		font-size: 1.3rem;
+		background-color: #084A83;
+	    color: #fff;
+	    border-style: none;
+		-webkit-border-radius: 0.5rem;
+		-moz-border-radius: 0.5rem;
+		border-radius: 0.5rem;
+	}
+
+	.addcard h2{
+		margin-left: 2rem;
+		padding: 1.5rem 0 0.2rem;
+		color: #084A83;
+		font-size: 1.3rem;
+		border-bottom: 2px dotted #539DDB;
+	}
+
+	.addcard input[type="text"]{
+		color: #084A83;
+		margin: 2% 9% 0;
+		font-size: 1.3rem;
+		padding: 0.5rem;
+		width: 82%;
+		border: #ccc solid 2px;
+		-webkit-border-radius: 1rem;
+		-moz-border-radius: 1rem;
+		border-radius: 1rem;
+	}
+
+	.addcard textarea {
+		color: #084A83;
+		margin: 2% 9% 5%;
+		font-size: 1.3rem;
+		padding: 0.5rem;
+		width: 82%;
+		border: #ccc solid 2px;
+		-webkit-border-radius: 1rem;
+		-moz-border-radius: 1rem;
+		border-radius: 1rem;
+	}
+
+	/* Firefox */
+	.addcard ::-moz-placeholder {
+		color: #666;
+	}
+
+	/* IE */
+	.addcard textarea:-ms-input-placeholder {
+		color: #666;
+	}
+	/*カード追加終わり*/
+
+	/*リクエスト追加*/
+	.addrequest h1{
+		padding: 1rem 1rem 0.5rem;
+		color: #084A83;
+		border-bottom: 3px solid #539DDB;
+	}
+
+	.addrequest input{
+		margin: 0 20%;
+		width: 60%;
+		height: 3rem;
+		font-size: 1.3rem;
+		background-color: #084A83;
+	    color: #fff;
+	    border-style: none;
+		-webkit-border-radius: 0.5rem;
+		-moz-border-radius: 0.5rem;
+		border-radius: 0.5rem;
+	}
+
+	.addrequest textarea {
+		color: #084A83;
+		margin: 5%;
+		font-size: 1.3rem;
+		padding: 0.5rem;
+		width: 90%;
+		border: #ccc solid 2px;
+		-webkit-border-radius: 1rem;
+		-moz-border-radius: 1rem;
+		border-radius: 1rem;
+	}
+
+	/* Firefox */
+	.addrequest ::-moz-placeholder {
+		color: #666;
+	}
+
+	/* IE */
+	.addrequest textarea:-ms-input-placeholder {
+		color: #666;
+	}
+	/*リクエスト追加終わり*/
 
 	/*トップに戻るやつ*/
 
